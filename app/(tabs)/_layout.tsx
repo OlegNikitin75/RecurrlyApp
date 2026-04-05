@@ -3,7 +3,7 @@ import { Tabs } from 'expo-router'
 
 export default function TabsLayout() {
 	return (
-		<Tabs>
+		<Tabs screenOptions={{headerShown:false}}>
 			<Tabs.Screen
 				name='index'
 				options={{
@@ -26,6 +26,12 @@ export default function TabsLayout() {
 				name='subscriptions'
 				options={{
 					title: 'Subscriptions'
+				}}
+			/>
+				<Tabs.Screen
+				name='subscriptions/[id]'
+				options={{
+					href: null
 				}}
 			/>
 		</Tabs>
